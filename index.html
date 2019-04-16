@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang='kr'>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131569774-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131569774-1');
+        </script>
+        <meta charset='utf-8' />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="keywords" content="아이폰, 메모, iPhone, Memo" />
+        <meta name="description" content="아이폰 메모 디자인으로 글귀를 저장할 수 있습니다." />
+        <meta name="author" content="Jinho Jang" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="아이폰 메모처럼" />
+        <meta property="og:description" content="아이폰 메모 디자인으로 글귀를 저장할 수 있습니다." />
+        <meta property="og:image" content="img/favicon.ico" />
+        <title>iPhone Memo</title>
+    </head>
+
+    <body>
+        <header>
+            <h2>iPhone Memo</h2>
+        </header>
+
+        <article>
+            <div>
+                <div id="text">
+                    <textarea name="proverb" id="proverb" placeholder="Please Write down." autofocus></textarea>
+                </div>
+            </div>
+
+            <div id="edit">
+                <div id="expand"><span onClick="expand()">EXPAND SPACE</span></div>
+
+                <div id="size">FONT SIZE 
+                    <button onClick="size(event, 'up')">+</button>
+                    <button onClick="size(event, 'down')">-</button>
+                </div>
+
+                <div id="align">
+                    <span onClick="textAlign('left')">LEFT</span>
+                    <span onClick="textAlign('center')"> / CENTER / </span>  
+                    <span onClick="textAlign('right')">RIGHT</span>
+                </div>
+            </div>
+
+            <button id="save_btn" onClick="save()">Save as Image</button>
+            <div id="caution">* Please use Chrome or Safari to save image</div>
+        </article>
+
+        <footer>👨‍💻 <a href="https://thanks-for.tistory.com" target="_blank" style="color:#555; text-decoration:none">Developer Blog</a><br /><br />© 2019 iPhone Memo All rights reserved.</footer>
+        
+        <script type="text/javascript" src="js/edit.js"></script>
+        <script type="text/javascript" src="js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="js/save.js"></script>
+    </body>
+</html>
